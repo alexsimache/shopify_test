@@ -20,7 +20,8 @@
   "homepage": "https://github.com/alexsimache/shopify_test#readme",
   "dependencies": {
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-intersection-observer": "^8.33.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

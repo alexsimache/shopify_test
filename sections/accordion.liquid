@@ -1,19 +1,11 @@
 {{ 'accordion.css' | asset_url | stylesheet_tag }}
 
+<input type="hidden" id="cityName" value="{{ section.settings.city_name }}" />
+<input type="hidden" id="apiKey" value="{{ section.settings.api_key }}" />
 
-{% comment %}<section class="accordion-wrapper">{% endcomment %}
-    {% comment %}<div class="container">{% endcomment %}
-        {% comment %}<div class="accordion">{% endcomment %}
-            {% comment %}<input type="hidden" id="cityName" value="{{ section.settings.city_name }}" />{% endcomment %}
-            {% comment %}<input type="hidden" id="apiKey" value="{{ section.settings.api_key }}" />{% endcomment %}
-{% comment %}{% endcomment %}
-            {% comment %}{% if section.settings.city_name != blank %}{% endcomment %}
-                {% comment %}<h2 class="section-heading">Weather data for "{{ section.settings.city_name }}"</h2>{% endcomment %}
-            {% comment %}{% endif %}{% endcomment %}
-            {% comment %}<div class="accordion-content"></div>{% endcomment %}
-        {% comment %}</div>{% endcomment %}
-    {% comment %}</div>{% endcomment %}
-{% comment %}</section>{% endcomment %}
+{% if section.settings.city_name != blank %}
+    <h2 class="section-heading">Weather data for "{{section.settings.city_name}}"</h2>
+{% endif %}
 
 <div id="react-accordion"></div>
 
@@ -42,12 +34,9 @@
 }
 {% endschema %}
 
-{% comment %}{{ 'accordion.js' | asset_url | script_tag }}{% endcomment %}
-
 <script defer type="module" src="{{ "accordion.bundle.js" | asset_url }}"></script>
 
 {% stylesheet %}
-
 {% endstylesheet %}
 
 {% javascript %}

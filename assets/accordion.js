@@ -12,7 +12,7 @@ const renderData = async () => {
 const accordionLogic = () => {
   const accordionItems = document.querySelectorAll('[data-accordion-item]');
 
-  accordionItems.forEach((item) => {
+    accordionItems.forEach((item) => {
     const button = item.querySelector('[data-accordion-button]');
     const icon = item.querySelector('[data-accordion-button-icon]');
     const content = item.querySelector('[data-accordion-content]');
