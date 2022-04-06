@@ -6,8 +6,7 @@ const Accordion = () => {
   const cityName = document.getElementById('cityName').value;
   const apiKey = document.getElementById('apiKey').value;
   const [data, setData] = useState({});
-  const { ref, inView, entry } = useInView({
-    triggerOnce: true,
+  const { ref, inView } = useInView({
     threshold: 0,
   });
   const accordionLogic = () => {
@@ -49,7 +48,6 @@ const Accordion = () => {
   }
 
   useEffect(() => {
-    console.warn(`lazy ${inView}`);
     if (!inView) return;
     getData().then(() => accordionLogic())
   }, [inView]);
@@ -69,21 +67,19 @@ const Accordion = () => {
   }
   return (
     <section className="accordion-wrapper" ref={ref}>
-      {inView ? (
-        <div className="container">
-          <div className="accordion">
-            <div className="accordion-content">
-              {data ? (
-                <>
-                  {Object.entries(data).map(([key, value]) => renderItem(key, value))}
-                </>
-              ) : (
-                <p>Fetching data from weather server...</p>
-              )}
-            </div>
+      <div className="container">
+        <div className="accordion">
+          <div className="accordion-content">
+            {data ? (
+              <>
+                {Object.entries(data).map(([key, value]) => renderItem(key, value))}
+              </>
+            ) : (
+              <p>Fetching data from weather server...</p>
+            )}
           </div>
         </div>
-      ) : null}
+      </div>
     </section>
   )
 }

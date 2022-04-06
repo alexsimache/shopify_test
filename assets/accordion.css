@@ -50,6 +50,7 @@
     font-size: 18px;
     font-weight: bold;
     margin: 0;
+    text-transform: capitalize;
 }
 
 .accordion__item-header-icon {
