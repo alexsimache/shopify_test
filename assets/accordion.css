@@ -109,3 +109,7 @@
     margin-bottom: 25px;
     overflow-wrap: break-word;
 }
+
+.section-heading {
+    text-align: center;
+}

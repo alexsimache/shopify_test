@@ -20,7 +20,6 @@ const accordionLogic = () => {
     window.addEventListener('resize', () => {
       if (content.getAttribute('data-accordion-content') === 'open') {
         content.style.height = 'auto';
-
         const contentHeight = content.scrollHeight;
         content.style.height = contentHeight + "px";
       }
@@ -29,7 +28,6 @@ const accordionLogic = () => {
     button.addEventListener('click', () => {
       if (content.getAttribute('data-accordion-content') !== 'open') {
         const contentHeight = content.scrollHeight;
-
         icon.setAttribute('data-accordion-button-icon', 'open');
         content.setAttribute('data-accordion-content', 'open');
         content.style.height = contentHeight + "px";

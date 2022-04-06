@@ -8,7 +8,7 @@
             <input type="hidden" id="apiKey" value="{{ section.settings.api_key }}" />
 
             {% if section.settings.city_name != blank %}
-                <h2 class="section-heading">{{ section.settings.city_name }}</h2>
+                <h2 class="section-heading">Weather data for "{{ section.settings.city_name }}"</h2>
             {% endif %}
             <div class="accordion-content"></div>
         </div>
