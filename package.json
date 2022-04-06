@@ -1,0 +1,35 @@
+{
+  "name": "dawn-clone",
+  "version": "1.0.0",
+  "description": "reactjs with shopify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --config webpack.dev.js --progress --color",
+    "build": "webpack --config webpack.prod.js --progress --color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexsimache/shopify_test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexsimache/shopify_test/issues"
+  },
+  "homepage": "https://github.com/alexsimache/shopify_test#readme",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.4",
+    "core-js": "^3.21.1",
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-merge": "^5.8.0"
+  }
+}
