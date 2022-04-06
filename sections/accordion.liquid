@@ -1,0 +1,50 @@
+{{ 'accordion.css' | asset_url | stylesheet_tag }}
+
+
+<section class="accordion-wrapper">
+    <div class="container">
+        <div class="accordion">
+            <input type="hidden" id="cityName" value="{{ section.settings.city_name }}" />
+            <input type="hidden" id="apiKey" value="{{ section.settings.api_key }}" />
+
+            {% if section.settings.city_name != blank %}
+                <h2 class="section-heading">{{ section.settings.city_name }}</h2>
+            {% endif %}
+            <div class="accordion-content"></div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+"name": "Accordion",
+"settings": [
+{
+"type": "text",
+"id": "api_key",
+"label": "API_KEY"
+},
+{
+"type": "text",
+"id": "city_name",
+"label": "City Name"
+}
+],
+
+"presets": [
+{
+"name": "Accordion",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+
+{{ 'accordion.js' | asset_url | script_tag }}
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
